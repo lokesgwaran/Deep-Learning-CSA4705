@@ -1,0 +1,2 @@
+import numpy as np, matplotlib.pyplot as plt
+x=np.linspace(-6,6,300);sig=1/(1+np.exp(-x));t=np.tanh(x);relu=np.maximum(0,x);plt.plot(x,sig,label='Sigmoid');plt.plot(x,t,label='Tanh');plt.plot(x,relu,label='ReLU');plt.axhline(0);plt.axvline(0);plt.xlabel('Input');plt.ylabel('Activation output');plt.title('Activation Functions');plt.legend();plt.grid();plt.savefig('output/activation.png');plt.show();print('Sigmoid range: 0 to 1');print('Tanh range: -1 to 1');print('ReLU: zero for negative inputs, linear for positive inputs')
